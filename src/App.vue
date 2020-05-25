@@ -13,3 +13,7 @@ export default {
 <style lang="scss" scoped>
 @import "./scss/main.scss";
 </style>
+
+<style lang="scss">
+@import "./scss/helpers/element-edit";
+</style>
