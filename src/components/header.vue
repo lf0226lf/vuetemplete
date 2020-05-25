@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <span @click="toggle">
-      <i :class="{'el-icon-s-fold':one,'el-icon-s-unfold':two}"></i>
+      <i :class="{'el-icon-s-fold':fold,'el-icon-s-unfold':unfold}"></i>
     </span>
     <el-dropdown>
       <i class="el-icon-setting" style="margin-right: 15px;cursor:pointer;"></i>
@@ -19,14 +19,14 @@
 export default {
   data() {
     return {
-      one: true,
-      two: false
+      fold: true,
+      unfold: false
     };
   },
   methods: {
     toggle: function() {
-      this.one = !this.one;
-      this.two = !this.two;
+      this.fold = !this.fold;
+      this.unfold = !this.unfold;
     }
   }
 };
