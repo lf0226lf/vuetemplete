@@ -1,17 +1,28 @@
 <template>
-  <div>
+  <div class="h-100">
     <div class="logo">
       <a href="index.html">
         <img src="../assets/images/logo-icon.png" class="logo-icon" alt="logo icon" />
         <h5 class="logo-text">vuetemplete</h5>
       </a>
     </div>
+    <div class="sidebar-menu">
+      <el-collapse v-model="activeNames" @change="handleChange">
+        <el-collapse-item name="1">
           <template slot="title">
-            一致性 Consistency
-            <i class="header-icon el-icon-info"></i>
+            组件
+            <!-- <i class="header-icon el-icon-info"></i> -->
           </template>
-          <div>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</div>
-          <div>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</div>
+          <div>
+            <ul class="menu-list">
+              <li>
+                <router-link active-class="active" class="nav-link" to="main">按钮</router-link>
+              </li>
+              <li>
+                <router-link active-class="active" class="nav-link" to="button">按钮</router-link>
+              </li>
+            </ul>
+          </div>
         </el-collapse-item>
         <el-collapse-item title="反馈 Feedback" name="2">
           <div>控制反馈：通过界面样式和交互动效让用户可以清晰的感知自己的操作；</div>

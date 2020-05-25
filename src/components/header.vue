@@ -1,5 +1,8 @@
 <template>
-  <div class="header" style="text-align: right; font-size: 12px">
+  <div class="header">
+    <span @click="toggle">
+      <i :class="{'el-icon-s-fold':one,'el-icon-s-unfold':two}"></i>
+    </span>
     <el-dropdown>
       <i class="el-icon-setting" style="margin-right: 15px;cursor:pointer;"></i>
       <el-dropdown-menu slot="dropdown">
@@ -13,7 +16,20 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      one: true,
+      two: false
+    };
+  },
+  methods: {
+    toggle: function() {
+      this.one = !this.one;
+      this.two = !this.two;
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
