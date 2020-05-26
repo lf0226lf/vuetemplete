@@ -70,3 +70,21 @@
   left: 0;
   height: calc(100% - 61px);
 }
+
+.aside-hide{
+  .sidebar-wrapper{
+    left: -300px;
+  }
+  .content-wrapper{
+    margin-left: 0;
+    .header{
+      margin-left: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px){
+  .sidebar-wrapper{
+    position: fixed;
+  }
+}

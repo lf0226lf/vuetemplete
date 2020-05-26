@@ -1,5 +1,5 @@
 <template>
-  <el-container class="h-100">
+  <el-container class="h-100" v-bind:class="{'aside-hide':this.$store.state.Heade.unfold} ">
     <el-aside class="sidebar-wrapper">
       <router-view name="aside" />
     </el-aside>
@@ -15,7 +15,32 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    window.onload = () => {
+      return (() => {
+        if (document.body.clientWidth < 1024) {
+          this.$store.state.Heade.fold = false;
+          this.$store.state.Heade.unfold = true;
+        } else {
+          this.$store.state.Heade.fold = true;
+          this.$store.state.Heade.unfold = false;
+        }
+      })();
+    };
+    window.onresize = () => {
+      return (() => {
+        if (document.body.clientWidth < 1024) {
+          this.$store.state.Heade.fold = false;
+          this.$store.state.Heade.unfold = true;
+        } else {
+          this.$store.state.Heade.fold = true;
+          this.$store.state.Heade.unfold = false;
+        }
+      })();
+    };
+  }
+};
 </script>
 
 <style lang="scss" scoped>

@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="body-bg bg-theme bg-theme-1">
-    <router-view name="layout"/>
+    <router-view name="layout" />
   </div>
 </template>
 

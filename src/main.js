@@ -82,6 +82,7 @@ import {
 } from 'element-ui'
 import App from './App'
 import router from './router'
+import store from './store'
 
 Vue.use(Pagination);
 Vue.use(Dialog);
@@ -166,12 +167,14 @@ Vue.prototype.$confirm = MessageBox.confirm;
 Vue.prototype.$prompt = MessageBox.prompt;
 Vue.prototype.$notify = Notification;
 Vue.prototype.$message = Message;
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,//加入store对象
   components: {
     App
   },
