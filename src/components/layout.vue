@@ -1,5 +1,5 @@
 <template>
-  <el-container class="h-100" v-bind:class="[{'aside-hide':this.$store.state.Heade.unfold},{'aside-hide':this.$store.state.Heade.fold_unfold}]">
+  <el-container class="h-100" v-bind:class="[{'aside-hide':this.$store.state.Heade.unfold},{'aside-show':this.$store.state.Heade.fold_fixed}]">
     <el-aside class="sidebar-wrapper">
       <router-view name="aside" />
     </el-aside>

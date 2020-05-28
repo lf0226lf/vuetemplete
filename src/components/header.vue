@@ -22,11 +22,11 @@ export default {
   methods: {
     toggle: function() {
       if (document.body.clientWidth >= 1024) {
+        this.$store.state.Heade.fold_fixed = false;
         this.$store.state.Heade.fold = !this.$store.state.Heade.fold;
         this.$store.state.Heade.unfold = !this.$store.state.Heade.unfold;
       }else{
         this.$store.state.Heade.fold_fixed = true;
-        console.log(this.$store.state.Heade.fold_fixed);
       }
     }
   }
