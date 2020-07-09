@@ -9,7 +9,7 @@ label,
 input,
 textarea,
 select {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: var(--color-none);
 }
 
 a {
@@ -58,7 +58,7 @@ a {
   bottom: 0;
   left: 0;
   overflow-y: auto;
-  background-color: #fff;
+  background-color: var(--color-bg);
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -73,5 +73,5 @@ a {
 }
 
 .bg-theme-1 {
-  background-image: linear-gradient(45deg, #1565C0, #1E88E5);
+  background-image: linear-gradient(45deg, var(--color-theme-0-0), var(--color-theme-0-1));
 }

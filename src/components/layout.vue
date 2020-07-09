@@ -1,7 +1,7 @@
 <template>
   <el-container class="h-100" v-bind:class="[{'aside-hide':this.$store.state.Heade.unfold},{'aside-show':this.$store.state.Heade.fold_fixed}]">
     <el-aside class="sidebar-wrapper">
-      <div class="sidebar-shadow"></div>
+      <div class="sidebar-shadow" @click="sidebarHide()"></div>
       <router-view name="aside" />
     </el-aside>
     <el-container class="content-wrapper">
@@ -40,6 +40,11 @@ export default {
         }
       })();
     };
+  },
+  methods:{
+    sidebarHide: function(){
+      this.$store.state.Heade.fold_fixed = false;
+    }
   }
 };
 </script>

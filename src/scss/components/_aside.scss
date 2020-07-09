@@ -67,3 +67,37 @@
   }
 }
 
+@media only screen and (max-width: 1024px){
+  .logo {
+    a {
+      .logo-text {
+        color: var(--color-fg-0);
+      }
+    }
+  }
+  .menu-list {
+    margin: 0;
+    padding: 0;
+
+    li {
+      .nav-link {
+        padding: 0 20px;
+        height: 46px;
+        line-height: 46px;
+        display: block;
+        color: var(--color-fg-1);
+        text-decoration: none;
+        border-left: 3px solid transparent;
+        transition: all 0.3s ease-in-out;
+
+        &:hover,
+        &.active {
+          color: var(--color-fg-0);
+          background-color: rgba(255, 255, 255, 0.15);
+          border-left: 3px solid rgba(255, 255, 255, 0.9);
+        }
+      }
+    }
+  }
+
+}
