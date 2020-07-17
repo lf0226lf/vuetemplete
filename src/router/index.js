@@ -62,8 +62,7 @@ export default new Router({
           aside: aside,
           main: input,
         }
-      }
-      ,
+      },
       {
         path: '/datetimepicker',
         name: 'datetimepicker',
